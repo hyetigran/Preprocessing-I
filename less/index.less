@@ -156,7 +156,7 @@ body {
 	font-size: @mobilefontsize;
 }
 section {
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 .container {
 	flex-flow: column;
@@ -226,10 +226,13 @@ a {
 	height: auto;
 }
 
-@h123margin: 5px;
+@h123margin: 20px;
+@colorgrey: rgb(230, 230, 230);
+@colorblue: rgb(99, 107, 214);
+
 .top-content {
 	margin: 20px 0;
-	background-color: rgb(99, 107, 214);
+	background-color: @colorblue;
 	display: flex;
 	border: 1px solid grey;
 	justify-content: flex-end;
@@ -244,6 +247,7 @@ a {
 	h1 {
 		font-size: 30px;
 		margin-bottom: @h123margin;
+		text-align: left;
 	}
 	h2 {
 		font-size: 25px;
@@ -258,11 +262,11 @@ a {
 		width: 50%;
 		border-radius: 4px;
 		font-size: 15px;
-		color: rgb(99, 107, 214);
+		color: @colorblue;
 		&:hover {
 			cursor: pointer;
 			color: white;
-			background-color: rgb(99, 107, 214);
+			background-color: @colorblue;
 			box-shadow: 4px;
 			border: 1px solid white;
 		}
@@ -272,11 +276,12 @@ a {
 h1 {
 	font-size: 25px;
 	text-align: center;
+	margin-bottom: @h123margin;
 }
 .middle-content {
 	padding: 0 10px;
 	div:last-child {
-		background-color: rgb(194, 192, 192);
+		background-color: @colorgrey;
 		border-radius: 4px;
 		padding: 4px 0;
 	}
@@ -286,7 +291,7 @@ h1 {
 
 	.line-center {
 		margin: 0;
-		background: rgb(194, 192, 192);
+		background: @colorgrey;
 		display: inline-block;
 		padding: 0 10px;
 	}
@@ -301,10 +306,37 @@ h1 {
 		top: 50%;
 		left: 20%;
 		right: 20%;
-		border-top: solid 1px blue;
+		border-top: solid 1px @colorblue
 		z-index: -1;
 	}
 }
 .bottom-content {
 	padding: 0 10px;
+	table {
+		width: 100%;
+	}
+	tr {
+		border: 1px solid @colorblue;
+		border-right: none;
+		border-left: none;
+	}
+	tr:nth-of-type(2) {
+		background-color: @colorgrey;
+	}
+	tr:nth-of-type(4) {
+		background-color: @colorgrey;
+	}
+	th {
+		font-weight: bold;
+		text-align: left;
+		margin: 10px 0;
+		padding: 10px 0;
+	}
+	td {
+		margin: 10px 0;
+		padding: 10px 0;
+	}
+	td:first-child {
+		font-weight: bold;
+	}
 }
