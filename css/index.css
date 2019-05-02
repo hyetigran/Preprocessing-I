@@ -137,6 +137,9 @@ body {
 :root {
   font-size: 100%;
 }
+section {
+  margin-bottom: 10px;
+}
 .container {
   flex-flow: column;
   margin: 0 auto;
@@ -227,7 +230,7 @@ a {
   color: white;
 }
 .top-content h1 {
-  font-size: 35px;
+  font-size: 30px;
   margin-bottom: 5px;
 }
 .top-content h2 {
@@ -252,6 +255,10 @@ a {
   box-shadow: 4px;
   border: 1px solid white;
 }
+h1 {
+  font-size: 25px;
+  text-align: center;
+}
 .middle-content {
   padding: 0 10px;
 }
@@ -263,14 +270,11 @@ a {
 .middle-content div > * {
   margin-bottom: 20px;
 }
-.middle-content h1 {
-  font-size: 25px;
-  text-align: center;
-}
 .middle-content .line-center {
   margin: 0;
   background: #c2c0c0;
   display: inline-block;
+  padding: 0 10px;
 }
 .middle-content li {
   text-align: center;
@@ -285,4 +289,7 @@ a {
   right: 20%;
   border-top: solid 1px blue;
   z-index: -1;
+}
+.bottom-content {
+  padding: 0 10px;
 }
